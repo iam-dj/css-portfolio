@@ -18,7 +18,8 @@
 /* sets the pages main tag color and adds a right padding so that the content don't touch the end */
 main {
   background-color: var(--primary);
-  padding-right: 239.59px;
+  padding-right: 200px;
+  transition: padding-right 0.5s ease-in-out;
 }
 
 /* justify the text in ALL p tags */
@@ -67,9 +68,14 @@ header {
 /* class named nav1 that aligns the text to the right and sets the grow of the flex to 1 */
 .nav1 {
   text-align: right;
+  text-decoration: none;
   flex: 1;
-  font-size: large;
-  color: var(--text-color);
+  font-size: x-large;
+  color: var(--alt-color);
+}
+
+.nav1 a:visited {
+  color: var(--highlight-box);
 }
 
 /* removes the bullets and sets the margin and padding of the ul tag inside of nav1 */
@@ -262,7 +268,22 @@ header {
 }
 
 /* sets the webpage to scale down at 877px to show elements in a line. It also removes the border and text alignment */
-@media (max-width: 877px) {
+@media (max-width: 1045px) {
+  main {
+    padding-right: 120px;
+  }
+}
+@media (max-width: 922px) {
+  main {
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 887px) {
+  main {
+    padding-right: 0;
+  }
+
   .image-nonmain {
     flex-basis: 100%;
   }
