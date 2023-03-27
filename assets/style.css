@@ -1,6 +1,6 @@
 /* color scheme source */
 :root {
-  --highlight-box: rgba(111, 127, 207, 0.561);
+  --highlight-box: rgb(111, 127, 207);
   --bg-color: rgb(102, 0, 255);
   --primary: rgb(0, 0, 0);
   --text-color: white;
@@ -25,6 +25,9 @@ main {
 /* justify the text in ALL p tags */
 p {
   text-align: justify;
+  font-size: 16px;
+  color: var(--text-color);
+  text-shadow: 0 0 1px var(--text-color), 0 0 2px var(--highlight-box), 0 0 3px var(--text-color);
 }
 
 /* sets ALL headers padding and asigns a flexbox as the parent and initializes them to center (specifically for the nav it goes wonky without it) */
@@ -74,6 +77,7 @@ header {
   color: var(--alt-color);
 }
 
+/* set nav1 text color after it's clicked */
 .nav1 a:visited {
   color: var(--highlight-box);
 }
