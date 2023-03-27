@@ -1,0 +1,280 @@
+/* color scheme source */
+:root {
+  --bright: rgba(111, 127, 207, 0.561);
+  --bright: rgb(102, 0, 255);
+  --primary: rgb(0, 0, 0);
+  --text-color: white;
+  --alt-color: rgb(255, 255, 255);
+}
+
+/* resets the page's padding, margin, and sets the font. */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* sets the pages main tag color and adds a right padding so that the content don't touch the end */
+main {
+  background-color: var(--primary);
+  padding-right: 70px;
+}
+
+/* justify the text in ALL p tags */
+p {
+  text-align: justify;
+}
+
+/* sets ALL headers padding and asigns a flexbox as the parent and initializes them to center (specifically for the nav it goes wonky without it) */
+header {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+/* class that has a bg color & sets a flex box and aligns avatar and name children to the center and start (left align) */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--alt-color);
+}
+
+/* setting the pixel size of the avatar picture */
+.avatar-child {
+  width: 44px;
+  height: 44px;
+}
+
+/* sets the width and height to be 100% of the cotainer and make it round */
+.avatar-child img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* sets the margin padding and font of h1 tag inside of the name-child class */
+.name-child h1 {
+  margin: 0;
+  padding-right: 20px;
+  font-size: 40px;
+}
+
+/* class named nav1 that aligns the text to the right and sets the grow of the flex to 1 */
+.nav1 {
+  text-align: right;
+  flex: 1;
+}
+
+/* removes the bullets and sets the margin and padding of the ul tag inside of nav1 */
+.nav1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* makes the li (list) inside of the ul tag go from vertical to horizontal and moves it away from the left margin */
+.nav1 ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* adds a transition (fade) underline when you hover over the nav names */
+.nav1 ul li a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+/* sets the hover color */
+.nav1 ul li a:hover {
+  border-bottom-color: var(--alt-color);
+}
+
+/* creates a look-through like effect for a predetermined window for an image that scales with the page when you zoom in and out */
+.hero {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 0px;
+  background-image: url("./clark-tibbs-oqStl2L5oxI-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: inset 0 0 8px var(--primary);
+}
+
+/* this creates the container that will house the caption */
+.caption-container {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: var(--bright);
+  padding: 2px;
+}
+
+/* this is the caption typography */
+.caption-design {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* this created a divide or section parent container */
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* this sets the typography for the h2 tag inside of the parent-container class */
+.parent-container h2 {
+  font-size: 40px;
+  color: var(--highlight-box);
+  text-align: end;
+}
+
+/* this sets the aside-child class flexbox to 20% of the left side of the main  */
+.aside-child {
+  flex: 0 0 20%;
+  color: var(--alt-color);
+  padding: 20px;
+  border-right: 5px solid var(--highlight-box);
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+
+/* this sets the article-child class flexbox to the remaining 80% of the main   */
+.article-child {
+  flex: 0 0 80%;
+  color: var(--alt-color);
+  padding: 20px;
+}
+
+/* this sets the image-container class flexbox to center and wrap its contents  */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* this sets the image-nonmain class as a child that should only take up 50% of the space along the horizontal axis and set postion to relative to add the caption box  */
+.image-nonmain {
+  flex-basis: 50%;
+  position: relative;
+  padding: 10px;
+}
+
+/* this sets the main-image class as a child that should take up 100% of the space along the main axis and set postion to relative to add the caption box  */
+.main-image {
+  flex-basis: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+/* fills the 100% flex-basis with the entire photo */
+.main-image img {
+  width: 100%;
+}
+
+/* create a hover effect that adds a glowing back ground and changes the picture when your mouse is over the image */
+.main-image img:hover {
+  box-shadow: 0 0 30px 0 var(--bright);
+  filter: contrast(60%);
+}
+
+/* fills the 50% flex-basis with the entire photo */
+.image-nonmain img {
+  width: 100%;
+  height: auto;
+}
+
+/* create a hover effect that adds a glowing back ground and changes the picture when your mouse is over the image */
+.image-nonmain img:hover {
+  box-shadow: 0 0 20px 0 var(--bright);
+  filter: contrast(60%);
+}
+
+/* asigns the subtitle-two class to the position of absolute so that you can layer it on top of the picture */
+.subtitle-two {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  color: var(--text-color);
+  background-color: var(--primary);
+  padding: 10px;
+  margin: 0;
+  font-size: 20px;
+}
+
+/* asigns and ID to sub2-main for typography edits */
+#sub2-main {
+  font-size: 36px;
+}
+
+/* aligns items in the article-child-2 class to vertically */
+.article-child-2 {
+  flex: 0 0 80%;
+  display: flex;
+  align-items: center;
+  color: var(--alt-color);
+  padding: 20px;
+}
+
+/* asigns typography edits to nav2 class */
+.nav2 {
+  text-align: center;
+  flex: 1;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+/* asigns typography edits to nav2 class */
+.nav2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* sets nav2 class horizontally */
+.nav2 ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* adds a transition (fade) underline when you hover over the nav2 names */
+.nav2 ul li a {
+  text-decoration: none;
+  color: var(--alt-color);
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+/* asigns a color to the nav2 options */
+.nav2 ul li a:hover {
+  border-bottom-color: var(--alt-color);
+}
+
+/* sets the webpage to scale down at 877px to show elements in a line. It also removes the border and text alignment */
+@media (max-width: 877px) {
+  .image-nonmain {
+    flex-basis: 100%;
+  }
+
+  .article-child, .article-child-2, .aside-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: auto;
+  }
+
+  h2::first-letter {
+    margin-left: 0.5em;
+  }
+}
