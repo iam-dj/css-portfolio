@@ -210,6 +210,35 @@ header {
   padding: 10px;
 }
 
+/* class image-main-desc  sets a relative container that I use for a figure element and position the figcaption over the image  */
+.image-main-desc {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+
+/* sets up typography and positioning of the caption description  */
+.caption {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  left: 0;
+  bottom: 70px;
+  width: 100%;
+  font-size: xx-large;
+  height: 27%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.734);  
+  transition: opacity 1s ease-in-out; 
+  color: var(--alt-color);
+}
+
+/* hover pseudo code that shows description when you hover  */
+.image-main-desc:hover .caption {
+  opacity: 1;
+
+}
+
 /* fills the 100% flex-basis with the entire photo */
 .main-image img {
   width: 100%;
