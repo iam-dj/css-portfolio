@@ -2,7 +2,7 @@
 
 ## Description
 
-This challenge exercised the core skills I've learned so far in bootcamp which included flexbox, media queries, and CSS variables with the creation of a portfoli. A portfolio is a great way to showcase my skills and talents to potential employers. 
+This challenge exercised the core skills I've learned so far in bootcamp which included flexbox, media queries, and CSS variables with the creation of a portfolio. A portfolio is a great way to showcase my skills and talents to potential employers. 
 
 ## Installation
 
