@@ -27,7 +27,8 @@ p {
   text-align: justify;
   font-size: 16px;
   color: var(--text-color);
-  text-shadow: 0 0 1px var(--text-color), 0 0 2px var(--highlight-box), 0 0 3px var(--text-color);
+  text-shadow: 0 0 1px var(--text-color), 0 0 2px var(--highlight-box),
+    0 0 3px var(--text-color);
 }
 
 /* sets ALL headers padding and asigns a flexbox as the parent and initializes them to center (specifically for the nav it goes wonky without it) */
@@ -46,12 +47,13 @@ header {
   align-items: center;
   justify-content: start;
   background-color: var(--highlight-box);
+  border-radius: 5px;
 }
 
 /* setting the pixel size of the avatar picture */
 .avatar-child {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
 }
 
 /* sets the width and height to be 100% of the cotainer and make it round */
@@ -64,8 +66,25 @@ header {
 /* sets the margin padding and font of h1 tag inside of the name-child class */
 .name-child h1 {
   margin: 0;
-  padding-right: 20px;
+  padding-right: 350px;
   font-size: 40px;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/* adds animation to make my name fade in from the right and the padding */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    padding-right: 350px;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+    padding-right: 35px;
+  }
 }
 
 /* class named nav1 that aligns the text to the right and sets the grow of the flex to 1 */
@@ -92,13 +111,14 @@ header {
 /* makes the li (list) inside of the ul tag go from vertical to horizontal and moves it away from the left margin */
 .nav1 ul li {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 15px;
+  padding-right: 30px;
 }
 
 /* adds a transition (fade) underline when you hover over the nav names */
 .nav1 ul li a {
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid;
   transition: border-bottom-color 0.3s ease-in-out;
 }
 
@@ -117,15 +137,17 @@ header {
   background-position: center;
   position: relative;
   box-shadow: inset 0 0 8px var(--primary);
+  border-bottom: 5px dashed var(--highlight-box);
 }
 
 /* this creates the container that will house the caption */
 .caption-container {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: -15px;
+  right: 5px;
   background-color: var(--highlight-box);
   padding: 2px;
+  border-radius: 5px;
 }
 
 /* this is the caption typography */
@@ -134,7 +156,6 @@ header {
   color: var(--text-color);
   font-size: 18px;
   font-weight: bold;
-  
 }
 
 /* this created a divide or section parent container */
@@ -292,7 +313,9 @@ header {
     flex-basis: 100%;
   }
 
-  .article-child, .article-child-2, .aside-child {
+  .article-child,
+  .article-child-2,
+  .aside-child {
     display: flex;
     justify-content: center;
     align-items: center;

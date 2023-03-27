@@ -15,8 +15,12 @@ Open the link https://iam-dj.github.io/second-challenge/ to see the replica page
 ## Credits
 
 https://flexboxfroggy.com/
+
 https://www.w3schools.com/css/css3_mediaqueries.asp
+
 https://www.w3schools.com/css/css3_variables.asp
+
+google search - css animations & keyframes
 
 
 ## License
