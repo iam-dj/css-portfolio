@@ -1,7 +1,7 @@
 /* color scheme source */
 :root {
-  --bright: rgba(111, 127, 207, 0.561);
-  --bright: rgb(102, 0, 255);
+  --highlight-box: rgba(111, 127, 207, 0.561);
+  --bg-color: rgb(102, 0, 255);
   --primary: rgb(0, 0, 0);
   --text-color: white;
   --alt-color: rgb(255, 255, 255);
@@ -18,7 +18,7 @@
 /* sets the pages main tag color and adds a right padding so that the content don't touch the end */
 main {
   background-color: var(--primary);
-  padding-right: 70px;
+  padding-right: 239.59px;
 }
 
 /* justify the text in ALL p tags */
@@ -41,7 +41,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: start;
-  background-color: var(--alt-color);
+  background-color: var(--highlight-box);
 }
 
 /* setting the pixel size of the avatar picture */
@@ -68,6 +68,8 @@ header {
 .nav1 {
   text-align: right;
   flex: 1;
+  font-size: large;
+  color: var(--text-color);
 }
 
 /* removes the bullets and sets the margin and padding of the ul tag inside of nav1 */
@@ -112,7 +114,7 @@ header {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  background-color: var(--bright);
+  background-color: var(--highlight-box);
   padding: 2px;
 }
 
@@ -122,6 +124,7 @@ header {
   color: var(--text-color);
   font-size: 18px;
   font-weight: bold;
+  
 }
 
 /* this created a divide or section parent container */
@@ -143,9 +146,7 @@ header {
   flex: 0 0 20%;
   color: var(--alt-color);
   padding: 20px;
-  border-right: 5px solid var(--bright);
-  padding-bottom: 15px;
-  margin-top: 20px;
+  border-right: 5px solid var(--highlight-box);
 }
 
 /* this sets the article-child class flexbox to the remaining 80% of the main   */
@@ -184,7 +185,7 @@ header {
 
 /* create a hover effect that adds a glowing back ground and changes the picture when your mouse is over the image */
 .main-image img:hover {
-  box-shadow: 0 0 30px 0 var(--bright);
+  box-shadow: 0 0 30px 0 var(--bg-color);
   filter: contrast(60%);
 }
 
@@ -196,7 +197,7 @@ header {
 
 /* create a hover effect that adds a glowing back ground and changes the picture when your mouse is over the image */
 .image-nonmain img:hover {
-  box-shadow: 0 0 20px 0 var(--bright);
+  box-shadow: 0 0 20px 0 var(--bg-color);
   filter: contrast(60%);
 }
 
