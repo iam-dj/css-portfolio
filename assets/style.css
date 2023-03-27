@@ -143,7 +143,7 @@ header {
   flex: 0 0 20%;
   color: var(--alt-color);
   padding: 20px;
-  border-right: 5px solid var(--highlight-box);
+  border-right: 5px solid var(--bright);
   padding-bottom: 15px;
   margin-top: 20px;
 }
